@@ -6,7 +6,7 @@
 /*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 14:13:31 by anschmit          #+#    #+#             */
-/*   Updated: 2025/05/03 17:21:25 by anna             ###   ########.fr       */
+/*   Updated: 2025/05/06 14:37:53 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 #define RESET "\033[0m"
 #include <iostream>
 #include <ostream>
+
+class Form;
 
 class Bureaucrat
 {
@@ -36,6 +38,7 @@ class Bureaucrat
 		int getGrade() const;	
 		void incrementGrade();
 		void decrementGrade();
+		void signForm(AForm& form);
 
 		class GradeTooHighException : public std::exception
 		{

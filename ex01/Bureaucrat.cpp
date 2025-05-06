@@ -6,11 +6,11 @@
 /*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 14:44:17 by anschmit          #+#    #+#             */
-/*   Updated: 2025/05/03 17:17:54 by anna             ###   ########.fr       */
+/*   Updated: 2025/05/06 14:34:15 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "AAAForm.hpp"
 
 Bureaucrat::Bureaucrat() {}
 
@@ -66,6 +66,19 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 const char* Bureaucrat::GradeTooLowException::what() const throw() 
 {
 	return ("\033[35mGrade too low\033[0m");
+}
+
+void Bureaucrat::signAForm(AForm& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->getName() << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 std::ostream &operator<<(std::ostream& os, const Bureaucrat& bc)
