@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: anna <anna@student.42.fr>                  +#+  +:+       +#+         #
+#    By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/02 14:16:05 by anschmit          #+#    #+#              #
-#    Updated: 2025/05/05 18:58:38 by anna             ###   ########.fr        #
+#    Updated: 2025/05/07 18:01:01 by anschmit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = BUREAUCRAT
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp
 
 CXX = c++
 

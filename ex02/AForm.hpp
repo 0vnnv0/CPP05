@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/07 17:47:27 by anschmit          #+#    #+#             */
+/*   Updated: 2025/05/07 17:47:29 by anschmit         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef AFORM_HPP
 #define AFORM_HPP
 
@@ -15,14 +27,14 @@ class AForm
 		AForm(const std::string& name, int gradeSign, int gradeExec);
 		AForm(const AForm &other);
 		AForm &operator=(const AForm &other);
-		virtual ~AForm();
+		virtual ~AForm() = 0;
 
 		virtual const std::string& getName() const;
 		bool isSigned() const;
 		int getGradeSign() const;
 		int getGradeExec() const;
 		void beSigned(const Bureaucrat& bureaucrat);
-		virtual void execute(Bureaucrat const & executor) const = 0;
+		void execute(Bureaucrat const & executor) const;
 		void performExecute(Bureaucrat const &executor);
 
 		class FormNotSignedException : public std::exception

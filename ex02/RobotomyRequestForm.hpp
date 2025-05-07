@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/07 17:47:09 by anschmit          #+#    #+#             */
-/*   Updated: 2025/05/07 17:47:11 by anschmit         ###   ########.fr       */
+/*   Created: 2025/05/07 17:51:12 by anschmit          #+#    #+#             */
+/*   Updated: 2025/05/07 17:52:07 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-#define SHRUBBERYCREATIONFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define ROBOTOMYREQUESTFORM_HPP
 
-#include "AForm.hpp"
-#include <fstream>
-#include <stdexcept>
+#include <iostream>
 
-class ShrubberyCreationForm : public AForm
+class RobotomyRequestForm
 {
 	private:
 		std::string _target;
-	public:
-		ShrubberyCreationForm(std::string const &target);
-		ShrubberyCreationForm(const ShrubberyCreationForm &other);
-		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
-		~ShrubberyCreationForm();
-		void action();
+	public:	
 };
 
 #endif
